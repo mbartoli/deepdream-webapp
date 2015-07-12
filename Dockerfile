@@ -64,11 +64,17 @@ WORKDIR /home
 RUN git clone https://github.com/mbartoli/deepdream-webapp
 WORKDIR /home/deepdream-webapp
 
-ADD ./webapp /opt/webapp/
-WORKDIR /opt/webapp
-EXPOSE 5000
-CMD ["python", "app.py"]
+COPY . /app
+WORKDIR /app
 
+
+#ADD ./webapp /opt/webapp/
+#WORKDIR /opt/webapp
+#EXPOSE 5000
+#CMD ["python", "app.py"]
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
 
 
 
