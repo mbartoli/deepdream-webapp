@@ -9,7 +9,7 @@ docker pull mbartoli/deepdream-webapp
 
 To start the web server:   
 ```
-docker run mbartoli/deepdream-webapp python /home/deepdream-webapp/webapp/app.py
+docker run -d -p 5000:5000 mbartoli/deepdream-webapp 
 ```
 
 See  
